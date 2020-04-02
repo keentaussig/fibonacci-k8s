@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: suspicioushaibt/fib-client 
+          image: suspicioushaibt/fib-client-for-k8s 
           ports:
             - containerPort: 3000
