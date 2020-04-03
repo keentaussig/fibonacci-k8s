@@ -11,6 +11,6 @@ docker push suspicioushaibt/fib-server:$SHA
 docker push suspicioushaibt/fib-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment server=suspicioushaibt/fib-client-for-k8s:$SHA
+kubectl set image deployments/client-deployment client=suspicioushaibt/fib-client-for-k8s:$SHA
 kubectl set image deployments/server-deployment server=suspicioushaibt/fib-server:$SHA
-kubectl set image deployments/worker-deployment server=suspicioushaibt/fib-worker:$SHA
+kubectl set image deployments/worker-deployment worker=suspicioushaibt/fib-worker:$SHA
