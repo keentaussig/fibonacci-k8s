@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service.json
   - gcloud config set project fibonacci-k8s-273103
   - gcloud config set compute/zone us-west1-a
-  - gcloud container clusters get-credentials multi-cluster
+  - gcloud container clusters get-credentials cluster-fibonacci-k8s
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t suspicioushaibt/react-test -f ./client/Dockerfile.dev ./client
 
