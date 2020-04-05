@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: transparentcast-net-tls
+spec:
+  secretName: transparentcast-net
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: transparentcast.net
+  dnsNames:
+    - transparentcast.net
+    - www.transparentcast.net
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - transparentcast.net
+          - www.transparentcast.net

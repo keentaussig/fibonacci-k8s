@@ -17,3 +17,5 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
+
+#cert-manager.io/cluster-issuer: "letsencrypt-prod"
