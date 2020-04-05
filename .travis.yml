@@ -21,7 +21,7 @@ script:
   - docker run -e CI=true suspicioushaibt/react-test npm run test
 
 deploy:
-# don't try to do anything with our project
+# Tells travis CI not to do anything with the project but use the following script instead
   provider: script
   script: bash ./deploy.sh
   on:
